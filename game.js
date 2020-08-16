@@ -5,7 +5,7 @@ var userClickedPattern = [];
 
 var started = false;
 var level = 0;
-$(document).dblclick(function() {
+$(document).tap(function() {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
@@ -15,7 +15,7 @@ $(document).dblclick(function() {
 $(document).keypress(function() {
   if (!started) {
     $("#level-title").text("Level " + level);
-@@ -36,7 +43,7 @@ function checkAnswer(currentLevel) {
+    function checkAnswer(currentLevel) {
     } else {
       playSound("wrong");
       $("body").addClass("game-over");
